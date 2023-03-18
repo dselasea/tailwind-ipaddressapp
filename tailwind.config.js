@@ -6,6 +6,9 @@ module.exports = {
       backgroundImage: {
         'hero-mobile': "url('/images/pattern-bg-mobile.png)",
         'hero-desktop': "url('/images/pattern-bg-mobile.png)",
+      },
+      width: {
+        '128': '32rem'
       }
     },
   },
