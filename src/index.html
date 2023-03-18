@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+  integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+  crossorigin=""/>
   <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body>
-    <div>
+    <div class="-z-10 fixed top-0 left-0 right-0">
       <!-- Header with image -->
         <div class="bg-[url('/images/pattern-bg-mobile.png')] md:bg-[url('/images/pattern-bg-desktop.png')] pt-10 pb-48 bg-no-repeat bg-cover">
           <h1 class="text-white text-center font-bold text-2xl mb-6">IP Address Tracker</h1>
@@ -18,7 +21,7 @@
             </form>
           </div>
         </div>
-        <div class="p-6 bg-yellow-200 h-screen">
+        <div class="p-6">
           <div class="bg-white text-center md:text-left px-6 py-10 container mx-auto rounded-lg max-w-5xl md:grid grid-cols-4 -mt-44 md:-mt-28">
               <div>
                 <p class="text-gray-300 font-bold text-sm">IP ADDRESS</p>
@@ -33,13 +36,22 @@
                 <p class="text-gray-300 font-bold text-sm">TIMEZONE</p>
                 <h4 class="text-black font-bold text-xl pb-3">UTC - 05:00</h4>
               </div>
-              <div>
+              <div class="z-50">
                 <p class="text-gray-300 font-bold text-sm">ISP</p>
                 <h4 class="text-black font-bold text-xl">SpaceX</h4>
                 <h4 class="text-black font-bold text-xl pb-3">Starlink</h4>
               </div>
           </div>
         </div>
+        <div id="map" class="-mt-64 md:-mt-28 -z-10">
+
+        </div>
     </div>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+    <script src="app.js"></script>
+ 
+    
 </body>
 </html>

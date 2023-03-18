@@ -9,7 +9,7 @@ module.exports = {
       },
       width: {
         '128': '32rem'
-      }
+      },
     },
   },
   plugins: [],
