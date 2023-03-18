@@ -8,15 +8,36 @@
 <body>
     <div>
       <!-- Header with image -->
-        <div class="bg-[url('/images/pattern-bg-mobile.png')] p-10 bg-no-repeat bg-cover text-center">
-          <h1>IP Address Tracker</h1>
-          <div>
-            <input type="text" /> <button>></button>
+        <div class="bg-[url('/images/pattern-bg-mobile.png')] md:bg-[url('/images/pattern-bg-desktop.png')] py-10 bg-no-repeat bg-cover">
+          <h1 class="text-white text-center font-bold text-2xl mb-6">IP Address Tracker</h1>
+          <div class="text-center">
+            <form class="px-6">
+              <label class="relative">
+                <input type="text" class="py-3 px-5 placeholder:italic w-full md:w-1/4 rounded-lg border-0" placeholder="Search for any IP address or domain" /><button class="bg-[url('/images/icon-arrow.svg')] bg-no-repeat bg-center p-6 bg-black absolute right-0 rounded-r-lg border-0"></button>
+              </label>
+            </form>
           </div>
         </div>
-        <div>
-          <div>
-
+        <div class="p-6 bg-black h-screen">
+          <div class="bg-white text-center md:text-left px-6 py-10 container mx-auto rounded-lg max-w-5xl md:grid grid-cols-4">
+              <div>
+                <p class="text-gray-300 font-bold text-sm">IP ADDRESS</p>
+                <h4 class="text-black font-bold text-xl pb-3">192.212.174.101</h4>
+              </div>
+              <div>
+                <p class="text-gray-300 font-bold text-sm">LOCATION</p>
+                <h4 class="text-black font-bold text-xl">Brooklyn, NY</h4>
+                <h4 class="text-black font-bold text-xl pb-3">10001</h4>
+              </div>
+              <div>
+                <p class="text-gray-300 font-bold text-sm">TIMEZONE</p>
+                <h4 class="text-black font-bold text-xl pb-3">UTC - 05:00</h4>
+              </div>
+              <div>
+                <p class="text-gray-300 font-bold text-sm">ISP</p>
+                <h4 class="text-black font-bold text-xl">SpaceX</h4>
+                <h4 class="text-black font-bold text-xl pb-3">Starlink</h4>
+              </div>
           </div>
         </div>
     </div>
