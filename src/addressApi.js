@@ -8,7 +8,8 @@ export const getInitialInfo = async () => {
   });
 
   const data = await response.json();
-  getIpAddressInfo(data.ip);
+  // getIpAddressInfo(data.ip);
+  return data.ip;
 }
 
 export const getIpAddressInfo = async (info) => {

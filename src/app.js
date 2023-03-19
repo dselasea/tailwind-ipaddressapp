@@ -4,8 +4,20 @@ import {getInitialInfo, getIpAddressInfo} from './addressApi.js';
 const timeZone = document.getElementById('timeZone');
 const isp = document.getElementById('isp');
 const ipAddress = document.getElementById('ipAddress');
+const region = document.getElementById('region');
+const network = document.getElementById('network');
 
-console.log(getInitialInfo());
+const userIpAddress = async () => {
+  const getInfo = await getInitialInfo();
+  const loadIp = await getIpAddressInfo(getInfo);
+  ipAddress.innerText = loadIp.ip;
+  region.innerText = loadIp.location.region;
+  network.innerText = loadIp.as.domain;
+  isp.innerText = loadIp.isp;
+  timeZone.innerText = loadIp.location.timezone;
+}
+
+window.addEventListener('load', userIpAddress);
 
 function getLocation() {
   if(navigator.geolocation) {
@@ -40,7 +52,7 @@ function createMap(lat, long) {
     iconAnchor: [22, 94],
   });
   
-  const  getMarkerPosition = L.marker([lat, long], {icon: mapIcon, draggable:true}).addTo(map);
+  L.marker([lat, long], {icon: mapIcon, draggable:true}).addTo(map);
 }
 
 
