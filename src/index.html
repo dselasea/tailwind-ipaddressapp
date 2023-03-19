@@ -16,12 +16,12 @@
           <div class="text-center">
             <form class="px-6">
               <label class="relative">
-                <input type="text" class="py-3 px-5 placeholder:italic w-full md:w-[32rem] rounded-lg border-0" placeholder="Search for any IP address or domain" /><button class="bg-[url('/images/icon-arrow.svg')] bg-no-repeat bg-center p-6 bg-gray-900 hover:bg-gray-700 absolute right-0 rounded-r-lg border-0"></button>
+                <input type="text" class="py-3 px-5 placeholder:italic w-full md:w-[32rem] rounded-lg border-0" placeholder="Search for any IP address or domain" /><button class="bg-[url('/images/icon-arrow.svg')] bg-no-repeat bg-center p-6 bg-gray-900 hover:bg-gray-700 absolute right-0 rounded-r-lg border-0" id="send"></button>
               </label>
             </form>
           </div>
         </div>
-        <div class="p-6">
+        <div class="p-6 relative">
           <div class="bg-white text-center md:text-left px-6 py-10 container mx-auto rounded-lg max-w-5xl md:grid grid-cols-4 -mt-44 md:-mt-28">
               <div>
                 <p class="text-gray-300 font-bold text-sm">IP ADDRESS</p>
@@ -42,9 +42,9 @@
                 <h4 class="text-black font-bold text-xl pb-3" id="network"></h4>
               </div>
           </div>
-        </div>
-        <div id="map" class="-mt-64 md:-mt-28 -z-10">
-
+          <div id="map" class=" -z-10 absolute top-0 left-0 bottom-0 right-0">
+  
+          </div>
         </div>
     </div>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"

@@ -6,7 +6,20 @@ const isp = document.getElementById('isp');
 const ipAddress = document.getElementById('ipAddress');
 const region = document.getElementById('region');
 const network = document.getElementById('network');
+const form = document.querySelector('form');
+const inputValue = document.querySelector('input');
 
+// form
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const loadIp = await getIpAddressInfo(inputValue.value.trim());
+  ipAddress.innerText = loadIp.ip;
+  region.innerText = loadIp.location.region;
+  network.innerText = loadIp.as.domain;
+  isp.innerText = loadIp.isp;
+  timeZone.innerText = loadIp.location.timezone;
+  
+})
 const userIpAddress = async () => {
   const getInfo = await getInitialInfo();
   const loadIp = await getIpAddressInfo(getInfo);
@@ -17,7 +30,7 @@ const userIpAddress = async () => {
   timeZone.innerText = loadIp.location.timezone;
 }
 
-window.addEventListener('load', userIpAddress);
+document.addEventListener('DOMContentLoaded', userIpAddress);
 
 function getLocation() {
   if(navigator.geolocation) {
